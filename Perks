@@ -1,0 +1,1710 @@
+menu_title: '&r &8*---=--&r &c&lTIENDA DE HABILIDADES &8--=---*'
+open_command: perks
+register_command: true
+size: 54
+items:
+
+  'Border1':
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+    display_name: '&r '
+    slots:
+    - 8
+    - 11
+    - 17
+    - 20
+    - 26
+    - 29
+    - 35
+    - 38
+    - 44
+    - 47-52
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    
+  'Border2':
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: '&r '
+    slots:
+    - 10
+    - 19
+    - 28
+    - 37
+    - 46
+    - 1
+    
+  'PerksIcon':
+    material: REPEATER
+    slot: 0 
+    display_name: '&6| &eHablidades + Comandos'
+    
+  'CosmeticsIcon':
+    material: REDSTONE
+    slot: 9
+    display_name: '&6| &eCosmeticos' 
+    click_commands:
+    - '[player] cosmetics'  
+    
+  'BackpackIcon':
+    material: CHEST
+    slot: 18
+    display_name: '&6| &eBackpack Upgrades' 
+    click_commands:
+    - '[player] backpackshop'     
+
+  'ClaimBlocksIcon':
+    material: GRASS_BLOCK
+    slot: 27
+    display_name: '&6| &eProtecciones' 
+    click_commands:
+    - '[player] proteccioneshop' 
+    lore:
+    - ' '
+    - '&7» &7Aqui podrás comprar'
+    - '&7» &7Tus bloques de Protecciones.'
+
+  'KeyShopIcon':
+    material: TRIPWIRE_HOOK
+    slot: 36
+    display_name: '&6| &eLlaves'
+    click_commands:
+    - '[player] keyshop'   
+    lore:
+    - ' '
+    - '&7» &7Aqui podrás comprar'
+    - '&7» &7Tus Keys para abrir &cCajas.'
+    
+  'NextPage':
+    material: arrow
+    slot: 53
+    display_name: '&e&lSiguiente pagina &e&l&m-->' 
+    click_commands:
+    - '[player] perks2'
+
+  'PlayerIcon':
+    material: PLAYER_HEAD
+    slot: 45
+    display_name: '&6Dinero: &f%player_name%'
+    lore:
+    - '&a%vault_eco_balance%$'
+    
+  
+
+  'JumpCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 12
+    priority: 3
+    display_name: '&c/Jump'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport a donde mires'
+    - '&7| &f(10 minutos de refresco).'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'JumpCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 12
+    priority: 2
+    display_name: '&e/Jump'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport a donde mires'
+    - '&7| &f(10 minutos de refresco).'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSÍ ✔'
+    - ' '
+    - '&f&oClick para comprar' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Jump'
+    - '[message] &fTeleport a donde mires'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.jump'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'JumpUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 12
+    priority: 1
+    display_name: '&a/Jump'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport a donde mires'
+    - '&7| &f(10 minutos de refresco).'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.jump'
+          
+  'NearCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 13
+    priority: 3
+    display_name: '&c/Near'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaber quien hay en 200 bloques'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'NearCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 13
+    priority: 2
+    display_name: '&e/Near'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaber quien hay en 200 bloques'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSÍ ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Near'
+    - '[message] &fSaber a quien hay a 200 bloques'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.near true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'NearUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 13
+    priority: 1
+    display_name: '&a/Near'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaber quien hay en 200 bloques'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.near'
+          
+  'Elevator+CannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 14
+    priority: 3
+    display_name: '&cElevator+'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fConsigue el permiso de subir más bloques'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$400,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'Elevator+CanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 14
+    priority: 2
+    display_name: '&eElevator+'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fConsigue el permiso de subir más bloques'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$400,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSÍ ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 400000
+    click_commands:
+    - '[takemoney] 400000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&lElevator'
+    - '[message] &fSubir mas bloques'  
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set elevator.bypass.distance true'
+    - '[console] lp user %player_name% permission set elevator.use true'
+    - '[console] lp user %player_name% permission set elevator.cooldown true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'Elevator+Unlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 14
+    priority: 1
+    display_name: '&aElevator+'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &f15 bloques de elevador'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'elevator.bypass.distance'
+
+  'CleanChestCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 15
+    priority: 3
+    display_name: '&c/Cleaninv'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOrganiza tus cofres'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$400,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'CleanChestCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 15
+    priority: 2
+    display_name: '&e/Cleaninv'
+    lore:
+    - ' '
+    - '&7&nDescripción'
+    - ' '
+    - '&7| &fOrganiza tus cofres'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$400,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSÍ ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 400000
+    click_commands:
+    - '[takemoney] 400000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/CleanChest'
+    - '[message] &fOrganizar tus cofres'  
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set chestcleaner.cmd.cleaninventory.sort true'
+    - '[console] lp user %player_name% permission set chestcleaner.cleaningitem.use true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'CleanChestUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 15
+    priority: 1
+    display_name: '&a/Cleaninv'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOrganises your chests'
+    - '&7| &fand enderchests.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'chestcleaner.cmd.cleaninventory.sort'
+  'AutorefillCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 21
+    priority: 3
+    display_name: '&cAutoRefill'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRefill Your blocks'
+    - '&7| &fautomatically'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'AutorefillCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 21
+    priority: 2
+    display_name: '&eAutoRefill'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRefill Your blocks'
+    - '&7| &fautomatically'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Autorefill'
+    - '[message] &7| &fRefill Your blocks'
+    - '[message] &7| &fautomatically'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set autorefill'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'AutorefillUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 21
+    priority: 1
+    display_name: '&a/Autorefill'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRefill Your blocks'
+    - '&7| &fautomatically'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'autorefill'
+ 
+  'FeedCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 22
+    priority: 3
+    display_name: '&c/Feed'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaciar el hambre'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'FeedCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 22
+    priority: 2
+    display_name: '&e/Feed'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaciar el hambre'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Feed'
+    - '[message] &fSaciar el hambre'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.feed true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'FeedUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 22
+    priority: 1
+    display_name: '&a/Feed'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fSaciar el hambre'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.feed'
+          
+  'AnvilCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 23
+    priority: 3
+    display_name: '&c/Anvil'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fEnchant and'
+    - '&7| &fTo got better your items!.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$5,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'AnvilCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 23
+    priority: 2
+    display_name: '&e/Anvil'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fEnchant and'
+    - '&7| &fTo got better your items!.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$5,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 5000000
+    click_commands:
+    - '[takemoney] 5000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Anvil'
+    - '[message] &fEnchant and'
+    - '[message] &fTo got better your items!.'   
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set anvil.use true'
+    - '[console] lp user %player_name% permission set essentials.anvil true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'AnvilUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 23
+    priority: 1
+    display_name: '&a/Anvil'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fView other'
+    - '&7| &fplayer''s inventories.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'anvil.use'
+          
+  'BlockCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 24
+    priority: 3
+    display_name: '&c/Block'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fConvert resources'
+    - '&7| &finto blocks.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$500,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'BlockCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 24
+    priority: 2
+    display_name: '&e/Block'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fConvert resources'
+    - '&7| &finto blocks.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$500,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 500000
+    click_commands:
+    - '[takemoney] 500000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Block'
+    - '[message] &fConvert resources'
+    - '[message] &finto blocks.'   
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.block true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'BlockUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 24
+    priority: 1
+    display_name: '&a/Block'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fConvert resources'
+    - '&7| &finto blocks.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.block'
+          
+  'EChestCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 25
+    priority: 3
+    display_name: '&c/Enderchest'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a'
+    - '&7| &fportable enderchest.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'EChestCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 25
+    priority: 2
+    display_name: '&e/Enderchest'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a'
+    - '&7| &fportable enderchest.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Enderchest'
+    - '[message] &fOpen a'
+    - '[message] &fportable enderchest.'   
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.enderchest true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'EChestUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 25
+    priority: 1
+    display_name: '&a/Enderchest'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a'
+    - '&7| &fportable enderchest.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.enderchest'
+         
+  'TpaCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 30
+    priority: 3
+    display_name: '&c/Tpa'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fto other players.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$100'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'TpaCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 30
+    priority: 2
+    display_name: '&e/Tpa'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fto other players.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$100'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick to purchase.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 100
+    click_commands:
+    - '[takemoney] 100'
+    - '[message] '
+    - '[message] &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Tpa'
+    - '[message] &fRequest to teleport'
+    - '[message] &fto other players.'   
+    - '[message] '
+    - '[message] &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.tpa true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'TpaUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 30
+    priority: 1
+    display_name: '&a/Tpa'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fto other players.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.tpa'
+          
+  'WorkBenchCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 31
+    priority: 3
+    display_name: '&c/Craft'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a crating table.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'WorkBenchCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 31
+    priority: 2
+    display_name: '&e/Craft'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a crafting table.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick to purchase.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Craft'
+    - '[message] &fOpen a crafting table'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.craft true'
+    - '[console] lp user %player_name% permission set essentials.workbench true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'WorkBenchUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 31
+    priority: 1
+    display_name: '&a/Craft'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fOpen a Crafting table.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.craft'
+          
+  'SetHomeCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 32
+    priority: 4
+    display_name: '&c/SetHome x3'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fCreate 3 homes.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$3,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'SetHomeCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 32
+    priority: 3
+    display_name: '&e/SetHome x3'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fCreate 3 homes.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$3,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 3000000
+    click_commands:
+    - '[takemoney] 3000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Sethome x3'
+    - '[message] &fCreate 3 homes'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.sethome.multiple.perks true'
+    - '[console] lp user %player_name% permission set essentials.sethome.multiple true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'SetHomeUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 32
+    priority: 1
+    display_name: '&a/SetHome x3'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fCreate 3 homes.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    - ' '
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.sethome.multiple.perks'
+          
+  'BackCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 33
+    priority: 4
+    display_name: '&c/Back'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport back to'
+    - '&7| &fyour previous'
+    - '&7| &fteleported location.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$1,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'BackCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 33
+    priority: 3
+    display_name: '&e/Back'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport back to'
+    - '&7| &fyour previous'
+    - '&7| &fteleported location.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$1,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick to purchase.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 1000000
+    click_commands:
+    - '[takemoney] 1000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Back'
+    - '[message] &fTeleport back to'
+    - '[message] &fyour previous.'   
+    - '[message] &fteleported location.' 
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.back'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'BackUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 33
+    priority: 2
+    display_name: '&a/Back'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fTeleport back to'
+    - '&7| &fyour previous'
+    - '&7| &fteleported location.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.back'
+          
+  'XpBottleCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 34
+    priority: 3
+    display_name: '&c/XpBottle'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fWithdraw your XP.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$3,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'XpBottleCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 34
+    priority: 2
+    display_name: '&e/XpBottle'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fWithdraw your XP.'
+    - ' '
+    - '&e• &7&nPrecio:&r &e$3,000,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 3000000
+    click_commands:
+    - '[takemoney] 3000000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/XpBottle'
+    - '[message] &fWithdraw your XP'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set BeastWithdraw.XpBottle'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'XpBottleUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 34
+    priority: 1
+    display_name: '&a/XpBottle'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fWithdraw your XP.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'BeastWithdraw.XpBottle'
+          
+
+          
+  'TpaHereCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 43
+    priority: 3
+    display_name: '&c/TpaHere'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fplayers to you.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$150,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'TpaHereCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 43
+    priority: 2
+    display_name: '&e/TpaHere'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fplayers to you.'
+    - ' '
+    - '&e• &7&nPrice:&r &e$150,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick to purchase.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 150000
+    click_commands:
+    - '[takemoney] 150000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Tpahere'
+    - '[message] &fRequest to teleport'
+    - '[message] &fplayers to you'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set essentials.tpahere true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'TpaHereUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 43
+    priority: 1
+    display_name: '&a/TpaHere'
+    lore:
+    - ' '
+    - '&7| &fRequest to teleport'
+    - '&7| &fplayers to you.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.tpahere'
+  'MsgCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 16
+    priority: 3
+    display_name: '&c/Msg'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fEnviar mensajes a otros jugadores.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$100'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&Puedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes dinero suficiente!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes dinero suficiente!'
+  'MsgCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 16
+    priority: 2
+    display_name: '&e/Msg'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fEnviar mensajes a otros jugadores.'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$100'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSÍ ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 100
+    click_commands:
+    - '[takemoney] 100'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Msg'
+    - '[message] &fEnviar mensaje a otros jugadores'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[message] '
+    - '[close]'
+  'MsgUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 16
+    priority: 1
+    display_name: '&a/Msg'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fEnviar mensajes a otros jugadores.'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'essentials.msg'
+
+
+
+  'PickaxeVeinMinerCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 39
+    priority: 3
+    display_name: '&cVeinMiner: Pickaxe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine ore veins in'
+    - '&7| &fone with a pickaxe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$5,000,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'PickaxeVeinMinerCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 39
+    priority: 2
+    display_name: '&eVeinMiner: Pickaxe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine ore veins in'
+    - '&7| &fone with a pickaxe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &e$500,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 500000
+    click_commands:
+    - '[takemoney] 500000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/VeinMiner: Pickaxe'
+    - '[message] &fMine ore veins in'
+    - '[message] &ffone with a pickaxe'
+    - '[message] &f(Hold sneak to activate)'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set veinminer.veinmine.pickaxe true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'PickaxeVeinMinerUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 39
+    priority: 1
+    display_name: '&aVeinMiner: Pickaxe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine ore veins in'
+    - '&7| &fone with a pickaxe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'veinminer.veinmine.pickaxe'
+          
+  'AxeVeinMinerCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 40
+    priority: 3
+    display_name: '&cVeinMiner: Axe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine wooden veins in'
+    - '&7| &fone with an axe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$500,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'AxeVeinMinerCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 40
+    priority: 2
+    display_name: '&eVeinMiner: Axe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine wooden veins in'
+    - '&7| &fone with an axe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &e$500,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick to purchase.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 500000
+    click_commands:
+    - '[takemoney] 500000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/Veinminer: Axe'
+    - '[message] &fMine wooden veins in'
+    - '[message] &ffone with an axe.'   
+    - '[message] &f(Hold sneak to activate).' 
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set veinminer.veinmine.axe true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'AxeVeinMinerUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 40
+    priority: 1
+    display_name: '&aVeinMiner: Axe'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine wooden veins in'
+    - '&7| &fone with an axe.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'veinminer.veinmine.axe'
+          
+  'ShovelVeinMinerCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 41
+    priority: 3
+    display_name: '&cVeinMiner: Shovel'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fShovel dirt, sand,'
+    - '&7| &fsoul sand and gravel'
+    - '&7| &fveins in one with a shovel.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$500,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'ShovelVeinMinerCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 41
+    priority: 2
+    display_name: '&eVeinMiner: Shovel'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fShovel dirt, sand,'
+    - '&7| &fsoul sand and gravel'
+    - '&7| &fveins in one with a shovel.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &e$500,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 500000
+    click_commands:
+    - '[takemoney] 500000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/VeinMiner: Shovel'
+    - '[message] &fShovel dirt, sand,'
+    - '[message] &fsoul sand and gravel'
+    - '[message] &fveins in one with a shovel'
+    - '[message] &f(Hold sneak to activate)'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set veinminer.veinmine.shovel true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'ShovelVeinMinerUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 41
+    priority: 1
+    display_name: '&aVeinMiner: Shovel'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fShovel dirt, sand,'
+    - '&7| fsoul sand and gravel'
+    - '&7| &fveins in one with a shovel.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'veinminer.veinmine.shovel'
+
+  'ShearsVeinMinerCannotAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZkZTNiZmNlMmQ4Y2I3MjRkZTg1NTZlNWVjMjFiN2YxNWY1ODQ2ODRhYjc4NTIxNGFkZDE2NGJlNzYyNGIifX19'
+    slot: 42
+    priority: 3
+    display_name: '&cVeinMiner: Shears'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine leaves'
+    - '&7| &fand web veins'
+    - '&7| &fin one with shears.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &c$500,000'
+    - ' '
+    - '&c• &7&nEstado:&r &c&lBLOQUEADO ✖'
+    - ' '
+    - '&c• &7&nPuedes comprarlo:&r &c&lNO ✖'
+    left_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+    right_click_commands:
+    - '[close]'
+    - '[message] &c&lERROR! &fNo tienes suficiente dinero!'
+  'ShearsVeinMinerCanAfford':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzY0MTY4MmY0MzYwNmM1YzlhZDI2YmM3ZWE4YTMwZWU0NzU0N2M5ZGZkM2M2Y2RhNDllMWMxYTI4MTZjZjBiYSJ9fX0='
+    slot: 42
+    priority: 2
+    display_name: '&eVeinMiner: Shears'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine leaves'
+    - '&7| &fand web veins'
+    - '&7| &fin one with shears.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&c• &7&nPrecio:&r &e$500,000'
+    - ' '
+    - '&e• &7&nEstado:&r &e&lDISPONIBLE ⛁'
+    - ' '
+    - '&e• &7&nPuedes comprarlo:&r &a&lSI ✔'
+    - ' '
+    - '&f&oClick para comprar.' 
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has money
+          amount: 250000
+    click_commands:
+    - '[takemoney] 500000'
+    - '[message] '
+    - '[message]  &a&m----------&r &b&k11&r &f&lPERK UNLOCKED! &b&k11&r &a&m----------'
+    - '[message] '
+    - '[message] &e&l/VeinMiner: Shears'
+    - '[message] &fMine leaves'
+    - '[message] &ffand web veins'
+    - '[message] &ffin one with shears'
+    - '[message] &f(Hold sneak to activate)'
+    - '[message] '
+    - '[message]  &a&m-------------------------------------'
+    - '[message] &a&lSUCCESS!\n&fUpgrade successfully purchased!'
+    - '[message] '
+    - '[console] lp user %player_name% permission set veinminer.veinmine.shears true'
+    - '[sound] BLOCK_ANVIL_DESTROY'
+    - '[close]'
+  'ShearsVeinMinerUnlocked':
+    material: 'basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI3Y2E0NmY2YTliYjg5YTI0ZmNhZjRjYzBhY2Y1ZTgyODVhNjZkYjc1MjEzNzhlZDI5MDlhZTQ0OTY5N2YifX19'
+    slot: 42
+    priority: 1
+    display_name: '&aVeinMiner: Shears'
+    lore:
+    - ' '
+    - '&7&nDescripción:'
+    - ' '
+    - '&7| &fMine leaves'
+    - '&7| &fand web veins'
+    - '&7| &fin one with shears.'
+    - '&7| &f(Hold sneak to activate).'
+    - ' '
+    - '&a• &7&nEstado:&r &a&lDESBLOQUEADO ✔'
+    view_requirement:
+      requirements:
+        anythinghere:
+          type: has permission
+          permission: 'veinminer.veinmine.shears'
